@@ -1,0 +1,16 @@
+import cv2
+import numpy
+x1=cv2.imread(r"F:\image\flower.jpg",0)
+thresh,img=cv2.threshold(x1,thresh=25,maxval=255,type=cv2.THRESH_BINARY)
+thresh1,img1=cv2.threshold(x1,thresh=65,maxval=255,type=cv2.THRESH_BINARY)
+thresh2,img2=cv2.threshold(x1,thresh=75,maxval=255,type=cv2.THRESH_BINARY)
+thresh3,img3=cv2.threshold(x1,thresh=128,maxval=255,type=cv2.THRESH_BINARY)
+thresh4,img4=cv2.threshold(x1,thresh=200,maxval=255,type=cv2.THRESH_BINARY)
+cv2.imshow("origin",x1)
+cv2.imshow("thresh=25",img)
+cv2.imshow("thresh=65",img1)
+cv2.imshow("thresh=75",img2)
+cv2.imshow("thresh=128",img3)
+cv2.imshow("thresh=200",img4)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
